@@ -1,3 +1,5 @@
+const CopyPlugin = require('copy-webpack-plugin')
+
 module.exports = {
   context: __dirname,
   entry: './script/main.js',
@@ -10,7 +12,9 @@ module.exports = {
     }
   },
   output: {
-    clean: true
+    clean: true,
+    publicPath: './'
+
   },
   builtins: {
     html: [{
@@ -18,4 +22,5 @@ module.exports = {
       inject: true
     }]
   }
+  
 }
